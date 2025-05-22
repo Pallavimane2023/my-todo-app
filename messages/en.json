@@ -23,6 +23,10 @@
        "addNewTodo":"Add New ToDo",
        "todoList":"Todo List",
        "notAvailable":"No TODOs available",
-       "searchTodo":"Search TODOs..."
+       "searchTodo":"Search TODOs...",
+       "login":"Login",
+       "register":"Register",
+       "noAccount":"Don't have an account?",
+       "exists":" Already have an account?"
     }
   }

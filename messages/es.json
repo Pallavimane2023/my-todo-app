@@ -22,6 +22,10 @@
        "addNewTodo":"Agregar nueva tarea pendiente",
        "todoList":"Lista de tareas pendientes",
        "notAvailable":"No hay tareas pendientes disponibles",
-       "searchTodo":"Buscar TODOs..."
+       "searchTodo":"Buscar TODOs...",
+       "login":"Acceso",
+       "register":"Registro",
+       "noAccount":"¿No tienes una cuenta?",
+       "exists":"¿Ya tienes una cuenta?"
     }
   }

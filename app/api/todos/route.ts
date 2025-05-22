@@ -3,8 +3,8 @@
 import { connectDB } from "@/lib/mongodb";
 import Todo from "@/models/todo";
 import { NextResponse } from "next/server";
-import { authOptions } from "../auth/[...nextauth]/route";
 import { getServerSession } from 'next-auth/next';
+import authOptions from "@/lib/authOptions";
 
 export async function GET() {
   await connectDB();
