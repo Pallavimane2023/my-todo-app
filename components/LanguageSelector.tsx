@@ -29,7 +29,7 @@ const LanguageSelector = () => {
 
   return (
     <div className="flex space-x-2">
-      <select onChange={(e) => changeLanguage(e.target.value)} className="bg-blue-500 text-white px-4 py-2 rounded">
+      <select onChange={(e) => changeLanguage(e.target.value)} value={locale} className="bg-blue-500 text-white px-4 py-2 rounded">
         <option value="en">English</option>
         <option value="es">Spanish</option>
       </select>
