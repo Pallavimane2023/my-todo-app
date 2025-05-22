@@ -25,9 +25,11 @@ export async function PUT(request: Request, { params }: { params: { id: string }
 
   const { title, description, status } = await request.json();
 
+  const {id} = await params;
+
   // Update the TODO item associated with the authenticated user
   const todo = await Todo.findByIdAndUpdate(
-    params.id,
+   id,
     { title, description, status },
     { new: true } // Return the updated document
   );
