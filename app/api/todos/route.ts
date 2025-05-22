@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 import { authOptions } from "../auth/[...nextauth]/route";
 import { getServerSession } from 'next-auth/next';
 
-export async function GET(request: Request) {
+export async function GET() {
   await connectDB();
 
   // Get the session to retrieve the user ID
@@ -30,7 +30,7 @@ export async function POST(req:Request){
         return NextResponse.json(todo,{status:201})
 
     }catch(error){
-        return NextResponse.json({message:"failed to add TodoList"},{status:500})
+        return NextResponse.json({message:`failed to add TodoList:${error}`},{status:500})
     }
 
 }

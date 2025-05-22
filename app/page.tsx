@@ -6,7 +6,6 @@ import { authOptions } from "./api/auth/[...nextauth]/route";
 
   async function Home() {
   const session = await getServerSession(authOptions);
-  console.log(session,"hh")
   if(session) redirect('/dashboard');
   return (
     <main><LoginForm/></main>

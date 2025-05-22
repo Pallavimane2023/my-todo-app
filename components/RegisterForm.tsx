@@ -12,7 +12,7 @@ export default function RegisterForm() {
 
   const router = useRouter();
 
-  const handleSubmit = async (e: { preventDefault: () => void; target: any; }) => {
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!name || !email || !password) {
@@ -49,8 +49,9 @@ export default function RegisterForm() {
       });
 
       if (res.ok) {
-        const form = e.target;
-        form.reset();
+        setName('');
+        setEmail('');
+        setPassword('');
         router.push("/");
       } else {
         console.log("User registration failed.");

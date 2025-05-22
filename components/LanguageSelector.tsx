@@ -27,8 +27,6 @@ const LanguageSelector = () => {
     router.refresh();
   };
 
-  console.log("lang",locale)
-
   return (
     <div className="flex space-x-2">
       <select onChange={(e) => changeLanguage(e.target.value)} className="bg-blue-500 text-white px-4 py-2 rounded">
