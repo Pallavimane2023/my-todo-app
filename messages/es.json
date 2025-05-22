@@ -1,0 +1,27 @@
+{
+    "tabTitle":{
+        "home":"Crear siguiente aplicación"
+
+    },
+    "my-todo":{
+       "welcome":"Bienvenida",
+       "logout":"Cerrar sesión",
+       "addTodo":"AÑADIR TODO +",
+       "update":"Actualizar todo",
+       "delete":"Borrar",
+       "edit":"Editar",
+       "title":"Título",
+       "description":"Descripción",
+       "status":"Estado",
+       "actions":"Comportamiento",
+       "pending":"Pendiente",
+       "completed":"Terminada",
+       "cancel":"Cancelar",
+       "add":"Agregar todo",
+       "footer":"2025 Mi aplicación Next.js. Todos los derechos reservados.",
+       "addNewTodo":"Agregar nueva tarea pendiente",
+       "todoList":"Lista de tareas pendientes",
+       "notAvailable":"No hay tareas pendientes disponibles",
+       "searchTodo":"Buscar TODOs..."
+    }
+  }

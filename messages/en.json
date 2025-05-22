@@ -1,0 +1,28 @@
+
+  {
+    "tabTitle":{
+        "home":"Create Next App"
+
+    },
+    "my-todo":{
+       "welcome":"Welcome",
+       "logout":"Logout",
+       "addTodo":"ADD TODO +",
+       "update":"Update Todo",
+       "delete":"Delete",
+       "edit":"Edit",
+       "title":"Title",
+       "description":"Description",
+       "status":"Status",
+       "actions":"Actions",
+       "pending":"Pending",
+       "completed":"Completed",
+       "cancel":"Cancel",
+       "add":"Add Todo",
+       "footer":"2025 My Next.js App. All rights reserved.",
+       "addNewTodo":"Add New ToDo",
+       "todoList":"Todo List",
+       "notAvailable":"No TODOs available",
+       "searchTodo":"Search TODOs..."
+    }
+  }
