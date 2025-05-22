@@ -1,16 +1,9 @@
-// app/api/auth/[...nextauth]/route.ts
-import NextAuth, { NextAuthOptions } from 'next-auth';
+import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-
 import bcrypt from 'bcryptjs';
+import { NextAuthOptions } from 'next-auth';
 import { connectDB } from '@/lib/mongodb';
 import User from '@/models/user';
-import { JWT } from 'next-auth/jwt';
-
-// Define a custom JWT type that extends the default JWT type
-interface CustomJWT extends JWT {
-  id?: string; // Add the id property
-}
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -27,7 +20,7 @@ export const authOptions: NextAuthOptions = {
         if (user && credentials?.password) {
           const isValidPassword = await bcrypt.compare(credentials.password, user.password);
           if (isValidPassword) {
-            return { id: user._id, email: user.email }; // Return user object with id and email
+            return { id: user._id, email: user.email };
           }
         }
         throw new Error('Invalid credentials');
@@ -37,22 +30,20 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NEXTAUTH_SECRET, 
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: '/', 
+    signIn: '/',
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.id = user.id; // Add user ID to the token
+        token.id = user.id;
       }
-      return token as CustomJWT; // Cast token to CustomJWT
+      return token;
     },
     async session({ session, token }) {
-      // Ensure token is of type CustomJWT
-      const customToken = token as CustomJWT;
-      if (customToken) {
-        session.user.id = customToken.id as string; // Assert that token.id is a string
+      if (token) {
+        session.user.id = token.id as string;
       }
       return session;
     },
