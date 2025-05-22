@@ -25,7 +25,7 @@ const Navbar = ()=>{
         ) : (
           <span className="text-sm">Not logged in</span>
         )}  
-          </header>
+        </header>
         </div>
   );
 }
