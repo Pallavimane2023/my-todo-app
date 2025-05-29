@@ -21,7 +21,6 @@ const TodoForm: React.FC<TodoFormProps> = ({ onSubmit, onClose, initialData  }) 
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState('pending');
 
-  // Populate the form fields with initial data if provided
   useEffect(() => {
     if (initialData) {
       setTitle(initialData.title || '');

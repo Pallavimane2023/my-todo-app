@@ -1,6 +1,6 @@
 
 import CredentialsProvider from 'next-auth/providers/credentials';
-import User from '@/models/user'; // Adjust the import path if necessary
+import User from '@/models/user';
 import bcrypt from 'bcryptjs';
 import { NextAuthOptions } from 'next-auth';
 import { connectDB } from './mongodb';

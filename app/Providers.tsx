@@ -4,7 +4,7 @@ import { SessionProvider } from 'next-auth/react';
 import { ReactNode } from 'react';
 
 interface AuthProviderProps {
-  children: ReactNode; // Define the type for children
+  children: ReactNode;
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {

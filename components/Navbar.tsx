@@ -23,7 +23,7 @@ const Navbar = ()=>{
             <LanguageSelector/>
           </div>
         ) : (
-          <span className="text-sm">Not logged in</span>
+          <span className="text-amber-100">TODO APP</span>
         )}  
         </header>
         </div>

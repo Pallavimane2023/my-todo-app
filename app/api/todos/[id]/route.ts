@@ -42,29 +42,24 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
   const id = (await params).id; 
 
-  // Update the TODO item associated with the authenticated user
   const todo = await Todo.findByIdAndUpdate(
    id,
     { title, description, status },
-    { new: true } // Return the updated document
+    { new: true }
   );
   return NextResponse.json(todo);
 }
 
 export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
-  // Await the params to access its properties
   const id = (await params).id; 
 
-  // Get the session to retrieve the user ID
   const session = await getServerSession(authOptions);
 
-  // Check if session and session.user are defined
   if (!session || !session.user) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
 
-  // Delete the TODO item associated with the authenticated user
-  await Todo.findByIdAndDelete(id); // Use the awaited id
+  await Todo.findByIdAndDelete(id);
 
   return NextResponse.json({message:"deleted successfully"});
 }
